@@ -1,0 +1,3060 @@
+<html>
+    <head>
+        <title>Trinkets and Baubles</title>
+        <style>
+            h1 {
+                color: white;
+            }
+
+            h2 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+
+            .class_restriction { color: #8d7b5f; }
+            .name { color: rgb(192 173 106); }
+            .relic { color: rgb(168 161 123); }
+            .foreign { color: rgb(91 75 180); }
+            .antique { color: rgb(96 76 56); }
+            .spoils { color: rgb(143 183 135); }
+            .common { color: rgb(168 168 168); }
+            .uncommon { color: rgb(96 149 75); }
+            .rare { color: rgb(59 97 167); }
+            .very_rare { color: rgb(194 69 0); }
+            .ancestral { color: rgb(224 39 0);  }
+            .deathblow { color: #b10000; }
+            .blight { color: #bdc241; }
+            .bleed { color: #b10000; }
+            .mark { color: #b10000; }
+            .heal { color: #87c241; }
+            .stun { color: #c99c45; }
+            .stress { color: #e0ddce; }
+            .scouting { color: #55998b; }
+            .debuff { color: #c3630f; }
+            .attack_type { color: #8d7b5f; }
+            .disease { color: rgb(121 141 69);  }
+            .move { color: #4c8ba2; }
+            .buff { color: #5ec9d6; }
+            .riposte { color: #c3630f; }
+            .guard { color: #5ec9d6; }
+            .stealth { color: #443f86; }
+            .trap { color: #8860b2; }
+            .afflict { color: rgb(177 25 0); }
+            .set { color: #84182d; }
+            .burn { color: #ff6a00; }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+                /* Add dots under the hoverable text */
+                cursor: pointer;
+                width: 72px;
+                height: 144px;
+            }
+
+            /* Tooltip text */
+            .tooltiptext {
+                visibility: hidden;
+                /* Hidden by default */
+                width: fit-content;
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+                padding: 5px 5px;
+                border-radius: 6px;
+                position: absolute;
+                inset-inline-start: 72px;
+                z-index: 1;
+                white-space: nowrap;
+                pointer-events: none;
+                /* Ensure tooltip is displayed above content */
+            }
+
+            /* Show the tooltip text on hover */
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            .trinket {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .spoiler {
+                display: block;
+                width: 85%;
+            }
+        </style>
+    </head>
+
+    <body style="background-color:rgb(35, 37, 37);">
+        <h1>Trinkets and Baubles</h1>
+
+        <h2>Regular Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_brass_bugle.png">
+                <span class="tooltiptext">
+                    <span class="name">Brass Bugle</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +4 SPD on First Round
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_dried_weeds.png">
+                <span class="tooltiptext">
+                    <span class="name">Dried Weeds</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    On Quest Complete: Transform into Wildberry Branch
+                </span>            
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_feathered_coat.png">
+                <span class="tooltiptext">
+                    <span class="name">Feathered Cloak</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +4% Max HP<br>
+                    +4% <span class="deathblow">Death Blow</span> Resist
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_rancid_cure_all.png">
+                <span class="tooltiptext">
+                    <span class="name">Rancid Cure-All</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +30% <span class="blight">Blight</span> Resist<br>
+                    +30% <span class="bleed">Bleed</span> Resist<br>
+                    -4 DODGE
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_seeker_ring.png">
+                <span class="tooltiptext">
+                    <span class="name">Seeker Ring</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +15% DMG vs <span class="mark">Marked</span><br>
+                    +10 ACC vs <span class="mark">Marked</span><br>
+                    -4 DODGE
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_spiked_bat.png">
+                <span class="tooltiptext">
+                    <span class="name">Spiked Bat</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +6 CRIT<br>
+                    -4 DODGE
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_treated_bandage.png">
+                <span class="tooltiptext">
+                    <span class="name">Treated Bandage</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +20% <span class="heal">Healing</span> Received<br>
+                    +15% <span class="blight">Blight</span> Resist<br>
+                    +15% <span class="bleed">Bleed</span> Resist<br>
+                    -4 DODGE
+                </span>
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_uncommon.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_water_of_ash.png">
+                <span class="tooltiptext">
+                    <span class="name">Water of Ash</span><br>
+                    <span class="uncommon">Uncommon</span><br>
+                    +8% <span class="deathblow">Death Blow</span> Resist<br>
+                    +10 DODGE at <span class="deathblow">Death's Door</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_brass_knuckles.png">
+                <span class="tooltiptext">
+                    <span class="name">Brass Knuckles</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10% DMG<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    -2 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_crimson_hook.png">
+                <span class="tooltiptext">
+                    <span class="name">Crimson Hook</span><br>
+                    <span class="rare">Rare</span><br>
+                    +25% DMG vs <span class="bleed">Bleeding</span><br>
+                    +15% <span class="bleed">Bleed</span> Chance<br>
+                    +3 CRIT<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_crushed_hemlock.png">
+                <span class="tooltiptext">
+                    <span class="name">Crushed Hemlock</span><br>
+                    <span class="rare">Rare</span><br>
+                    +25% DMG vs <span class="blight">Blighted</span><br>
+                    +15% <span class="blight">Blight</span> Chance<br>
+                    +8 DODGE<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_red_lantern.png">
+                <span class="tooltiptext">
+                    <span class="name">Darklight Lantern</span><br>
+                    <span class="rare">Rare</span><br>
+                    +4 DODGE<br>
+                    -20% Chance Party <span class="surprise">Surprised</span><br>
+                    +20% Chance Monsters <span class="surprise">Surprised</span><br>
+                    -4 ACC
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_eagle_eye_talisman.png">
+                <span class="tooltiptext">
+                    <span class="name">Eagle Eye Talisman</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10% DMG<br>
+                    +10 ACC<br>
+                    -2 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_retarius_net.png">
+                <span class="tooltiptext">
+                    <span class="name">Entangling Net</span><br>
+                    <span class="rare">Rare</span><br>
+                    +8 ACC<br>
+                    +20% <span class="debuff">Debuff</span> Chance<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    -8 DODGE
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_gladiator_helmet.png">
+                <span class="tooltiptext">
+                    <span class="name">Gladiator's Helmet</span><br>
+                    <span class="rare">Rare</span><br>
+                    +20 PROT<br>
+                    +10% MAX HP<br>
+                    -8 ACC
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_hunters_charm.png">
+                <span class="tooltiptext">
+                    <span class="name">Hunter's Charm</span><br>
+                    <span class="rare">Rare</span><br>
+                    +20% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +6 CRIT<br>
+                    -10% DMG <span class="attack_type">Melee</span> Skills<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_jagged_chopper.png">
+                <span class="tooltiptext">
+                    <span class="name">Jagged Chopper</span><br>
+                    <span class="rare">Rare</span><br>
+                    +20% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +6 CRIT<br>
+                    -10% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_silver_syringe.png">
+                <span class="tooltiptext">
+                    <span class="name">Silver Syringe</span><br>
+                    <span class="rare">Rare</span><br>
+                    -1 SPD<br>
+                    +25% <span class="heal">Healing</span> Done<br>
+                    -30% <span class="stun">Stun</span> Resist<br>
+                    -30% <span class="debuff">Debuff</span> Resist<br>
+                    -30% <span class="disease">Disease</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_the_finisher.png">
+                <span class="tooltiptext">
+                    <span class="name">The Finisher</span><br>
+                    <span class="rare">Rare</span><br>
+                    +25% DMG vs HP below 40%<br>
+                    +20 ACC vs HP below 40%
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_wildberry_branch.png">
+                <span class="tooltiptext">
+                    <span class="name">Wildberry Branch</span><br>
+                    <span class="rare">Rare</span><br>
+                    +20% <span class="heal">Healing</span> Done<br>
+                    +20% <span class="stress">Stress Relief</span> Done<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    On Quest Complete: Transform into Elderberry Bouquet
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_champions_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Champion's Helm</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +25% DMG if in position 1<br>
+                    +10 PROT if in position 1<br>
+                    -30% <span class="move">Move</span> Resist<br>
+                    On Quest Complete: Transform into Enforcer's Helm
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_custodians_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Custodian's Helm</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +20% MAX HP if in position 4<br>
+                    -20% <span class="stress">Stress</span> if in position 4<br>
+                    -30% <span class="move">Move</span> Resist<br>
+                    On Quest Complete: Transform into Champion's Helm
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_dawnbreaker.png">
+                <span class="tooltiptext">
+                    <span class="name">Dawnbreaker</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    Trigger Limit: 1<br>
+                    +15% DMG on First Round<br>
+                    +9 CRIT on First Round<br>
+                    +4 SPD on First Round<br>
+                    -2 SPD after First Round<br>
+                    On Combat End: Torch +5<br>
+                    When Trigger Limit Exhausted: Transform into Duskbringer
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_duskbringer.png">
+                <span class="tooltiptext">
+                    <span class="name">Duskbringer</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    Trigger Limit: 1<br>
+                    +10% DMG after First Round<br>
+                    +3 CRIT after First Round<br>
+                    +2 SPD after First Round<br>
+                    -10 SPD on First Round<br>
+                    On Combat End: Torch -5<br>
+                    When Trigger Limit Exhausted: Transform into Dawnbreaker
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_eerie_eye.png">
+                <span class="tooltiptext">
+                    <span class="name">Eerie Eye</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +25% DMG if in position 4<br>
+                    +10 ACC if in position 4<br>
+                    +10 DODGE if in position 4<br>
+                    -30% <span class="move">Move</span> Resist<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_elderberry_bouquet.png">
+                <span class="tooltiptext">
+                    <span class="name">Elderberry Bouquet</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +33% <span class="heal">Healing</span> Done<br>
+                    +33% <span class="stress">Stress Relief</span> Done<br>
+                    +20% <span class="stress">Virtue</span> Chance<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_enforcers_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Enforcer's Helm</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +2 SPD if in position 2<br>
+                    +10 ACC if in position 2<br>
+                    -30% <span class="move">Move</span> Resist<br>
+                    On Quest Complete: Transform into Vandal's Helm
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_hand_of_infamy.png">
+                <span class="tooltiptext">
+                    <span class="name">Hand of Infamy</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG<br>
+                    +33% <span class="heal">Healing</span> Done if in position 1<br>
+                    +33% <span class="heal">Healing</span> Done if in position 2<br>
+                    -10% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_heart_gambit.png">
+                <span class="tooltiptext">
+                    <span class="name">Heart Gambit</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG if HP above 75%<br>
+                    +5 ACC if HP above 75%<br>
+                    +8 DODGE if HP above 75%<br>
+                    +5 SPD if HP above 75%<br>
+                    -15% <span class="deathblow">Death Blow</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_shard_of_will.png">
+                <span class="tooltiptext">
+                    <span class="name">Hunter's Ward</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +50% <span class="heal">Healing</span> Received<br>
+                    -15% <span class="stress">Stress</span><br>
+                    +25% DMG Received
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_insignia_of_courage.png">
+                <span class="tooltiptext">
+                    <span class="name">Insignia of Courage</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15% DMG if <span class="stress">Virtued</span><br>
+                    +5 CRIT if <span class="stress">Virtued</span><br>
+                    +3 SPD if <span class="stress">Virtued</span><br>
+                    +15% <span class="stress">Virtue</span> Chance<br>
+                    +20% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_memento_capere.png">
+                <span class="tooltiptext">
+                    <span class="name">Memento Capere</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    Trigger Limit: 1<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +15% DMG<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +2 SPD<br>
+                    When Trigger Limit Exhausted: Transform into Memento Vivere
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_memento_mori.png">
+                <span class="tooltiptext">
+                    <span class="name">Memento Mori</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    Trigger Limit: 1<br>
+                    On Turn End: Self: <span class="stress">Stress</span> +10<br>
+                    When Trigger Limit Exhausted: Transform into Memento Capere
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_memento_vivere.png">
+                <span class="tooltiptext">
+                    <span class="name">Memento Vivere</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    Trigger Limit: 1<br>
+                    On Turn End: Self: <span class="heal">Heal</span> 6 HP<br>
+                    When Trigger Limit Exhausted: Transform into Memento Mori
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_nepenthe.png">
+                <span class="tooltiptext">
+                    <span class="name">Nepenthe</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% MAX HP<br>
+                    +15% <span class="stress">Virtue</span> Chance<br>
+                    -15% <span class="stress">Stress</span><br>
+                    -5 DODGE on First Round<br> 
+                    -1 SPD on First Round
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ring_of_insatiable_hunger.png">
+                <span class="tooltiptext">
+                    <span class="name">Ring of Insatiable Hunger</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +4 CRIT <span class="attack_type">Melee</span> Skills<br>
+                    +50% Food Consumed<br> 
+                    On Quest Complete: Transform into Ring of Unquenchable Thirst
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ring_of_unquenchable_thirst.png">
+                <span class="tooltiptext">
+                    <span class="name">Ring of Unquenchable Thirst</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +4 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    +50% Food Consumed<br> 
+                    On Quest Complete: Transform into Ring of Insatiable Hunger
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_rotting_trophy.png">
+                <span class="tooltiptext">
+                    <span class="name">Rotting Finger</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15 PROT if in position 1<br>
+                    +20% DMG if in position 2<br>
+                    +15 ACC if in position 3<br>
+                    +4 SPD if in position 4<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_soul_diadem.png">
+                <span class="tooltiptext">
+                    <span class="name">Soul Diadem</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +25% DMG if HP below 25%<br>
+                    +5 CRIT if HP below 25%<br>
+                    +5 SPD if HP below 25%<br>
+                    -15% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_vandals_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Vandal's Helm</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10 DODGE if in position 3<br>
+                    +6 CRIT if in position 3<br>
+                    -30% <span class="move">Move</span> Resist<br>
+                    On Quest Complete: Transform into Custodian's Helm
+                </span>   
+            </div>
+        </div>
+
+        <h2>Ancestral Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_bell.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Bell</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +20% DMG on First Round<br>
+                    +4 SPD on First Round<br>
+                    +8 ACC<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_contract.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Blacklist</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +1 SPD<br>
+                    +20% DMG vs <span class="stun">Stunned</span><br>
+                    +30% <span class="stun">Stun</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_bracelet.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Bracelet</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +8 ACC<br>
+                    +12 DODGE<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_coin.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Coin</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15% MAX HP<br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    -10 DODGE<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_gloves.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Gloves</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +1 SPD<br>
+                    +50% <span class="riposte">Riposte</span> Duration<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Helm</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15 PROT<br>
+                    +30% <span class="stun">Stun</span> Chance<br>
+                    +30% <span class="stun">Stun</span> Resist<br>
+                    +20% <span class="stress">Stress Relief</span> Done<br>
+                    -25% DMG<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_key.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Key</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +5 SPD<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_mask.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Mask</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +20% <span class="heal">Healing</span> Received<br>
+                    +20% <span class="blight">Blight</span> Resist<br>
+                    +20% <span class="bleed">Bleed</span> Resist<br>
+                    +20% <span class="move">Move</span> Resist<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_memoir.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Memoir</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +10% <span class="scouting">Scouting</span> Chance<br>
+                    -10% Chance Party <span class="scouting">Surprised</span><br>
+                    +10% Chance Monsters <span class="scouting">Surprised</span><br>
+                    +15% <span class="stress">Stress Relief</span> Done<br>
+                    -4 DODGE<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_padlock.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Padlock</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +10 ACC<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +30% <span class="blight">Blight</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_pin.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Pin</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +25% DMG if in position 1<br>
+                    +30% <span class="move">Move</span> Resist<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_prayer_book.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Prayer Book</span><br>
+                    <span class="class_restriction">[Vestal only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +10 ACC<br>
+                    +10% <span class="stun">Stun</span> Chance<br>
+                    +15% <span class="heal">Healing</span> Done<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_seal.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Seal</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15% DMG vs <span class="mark">Marked</span><br>
+                    +10 ACC vs <span class="mark">Marked</span><br>
+                    +4 CRIT vs <span class="mark">Marked</span><br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_sheath.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Sheath</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15 ACC <span class="attack_type">Melee</span> Skills<br>
+                    +10 CRIT <span class="attack_type">Melee</span> Skills<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_shield.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Shield</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15% MAX HP<br>
+                    +10 PROT<br>
+                    +33% <span class="guard">Guard</span> Duration<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_spices.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Spices</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +12 CRIT vs <span class="blight">Blighted</span><br>
+                    +30% <span class="blight">Blight</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_spiked_ball.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Spiked Ball</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +12 CRIT vs <span class="bleed">Bleeding</span><br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_tablet.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Tablet</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +40% <span class="heal">Healing</span> Done<br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_ancestral.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ancestors_throwing_knife.png">
+                <span class="tooltiptext">
+                    <span class="name">Ancestor's Throwing Knife</span><br>
+                    <span class="class_restriction">[Grave Robber only]</span><br>
+                    <span class="ancestral">Ancestral</span><br>
+                    +15 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +10 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+        </div>
+
+        <h2>Dual-Class Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ace_of_spades.png">
+                <span class="tooltiptext">
+                    <span class="name">Ace of Spades</span><br>
+                    <span class="class_restriction">[Duelist or Highwayman only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    <span class="riposte">Riposte</span>: +12 CRIT<br>
+                    -5 CRIT when <span class="riposte">Riposte</span> is not active<br>
+                    Increased chance of winning gold while Gambling<br>
+                    Increased chance of winning trinkets while Gambling
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bedazzling_specimen.png">
+                <span class="tooltiptext">
+                    <span class="name">Bedazzling Specimen</span><br>
+                    <span class="class_restriction">[Hellion or Plague Doctor only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +20% DMG vs <span class="stun">Stunned</span><br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    -10% <span class="blight">Blight</span> Chance<br>
+                    -10% <span class="bleed">Bleed</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_branding_iron.png">
+                <span class="tooltiptext">
+                    <span class="name">Branding Iron</span><br>
+                    <span class="class_restriction">[Runaway or Flagellant only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +2 SPD<br>
+                    +33% <span class="heal">Restoration</span> Duration<br>
+                    +5% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_craft_bomb.png">
+                <span class="tooltiptext">
+                    <span class="name">Craft Bomb</span><br>
+                    <span class="class_restriction">[Runaway or Grave Robber only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15% DMG while <span class="stealth">Stealthed</span><br>
+                    +7 CRIT while <span class="stealth">Stealthed</span><br>
+                    Crits Received Chance: +5%
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_fleshbound_grimoire.png">
+                <span class="tooltiptext">
+                    <span class="name">Fleshbound Grimoire</span><br>
+                    <span class="class_restriction">[Antiquarian or Occultist only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +40% <span class="debuff">Debuff</span> Chance<br>
+                    -10 ACC <span class="attack_type">Melee</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_gleaming_breastplate.png">
+                <span class="tooltiptext">
+                    <span class="name">Gleaming Breastplate</span><br>
+                    <span class="class_restriction">[Man-at-Arms or Vestal only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15 PROT<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +20% <span class="stun">Stun</span> Resist<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_grappling_mits.png">
+                <span class="tooltiptext">
+                    <span class="name">Grappling Mits</span><br>
+                    <span class="class_restriction">[Bounty Hunter or Leper only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +8 ACC<br>
+                    +30% <span class="move">Move</span> Chance<br>
+                    -4 DODGE
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_heritage_heirloom.png">
+                <span class="tooltiptext">
+                    <span class="name">Heritage Heirloom</span><br>
+                    <span class="class_restriction">[Abomination or Duelist only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +2 SPD if in mode Aggressive<br>
+                    +15% DMG if in mode Aggressive<br>
+                    +2 SPD if in mode Beast<br>
+                    +15% DMG if in mode Beast<br>
+                    +8 ACC if in mode Defensive<br>
+                    +8 DODGE if in mode Defensive<br>
+                    +8 ACC if in mode Human<br>
+                    +8 DODGE if in mode Human<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_hysterical_tambourine.png">
+                <span class="tooltiptext">
+                    <span class="name">Hysterical Tambourine</span><br>
+                    <span class="class_restriction">[Jester or Occultist only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +2 SPD<br>
+                    -10% <span class="stress">Stress</span><br>
+                    -5% DMG
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_last_breath_collar.png">
+                <span class="tooltiptext">
+                    <span class="name">Last Breath Collar</span><br>
+                    <span class="class_restriction">[Flagellant or Houndmaster only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +12 CRIT vs <span class="bleed">Bleeding</span><br>
+                    -10% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_leather_bandolier.png">
+                <span class="tooltiptext">
+                    <span class="name">Leather Bandolier</span><br>
+                    <span class="class_restriction">[Grave Robber or Plague Doctor only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +20% <span class="blight">Blight</span> Chance<br>
+                    -10% DMG <span class="attack_type">Melee</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_medic_fullplate.png">
+                <span class="tooltiptext">
+                    <span class="name">Medic Fullplate</span><br>
+                    <span class="class_restriction">[Arbalest or Vestal only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10 PROT<br>
+                    +15% <span class="heal">Healing</span> Done<br>
+                    -6 ACC <span class="attack_type">Ranged</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_padded_armguard.png">
+                <span class="tooltiptext">
+                    <span class="name">Padded Armguard</span><br>
+                    <span class="class_restriction">[Arbalest or Houndmaster only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15 PROT if in position 4<br>
+                    +10 DODGE if in position 4<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_peacock_earrings.png">
+                <span class="tooltiptext">
+                    <span class="name">Peacock Earrings</span><br>
+                    <span class="class_restriction">[Hellion or Shieldbreaker only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15% DMG on First Round<br>
+                    +6 CRIT on First Round<br>
+                    -1 SPD after First Round
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ring_of_betrothal.png">
+                <span class="tooltiptext">
+                    <span class="name">Ring of Betrothal</span><br>
+                    <span class="class_restriction">[Bounty Hunter or Crusader only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_scaled_shoulder.png">
+                <span class="tooltiptext">
+                    <span class="name">Scaled Shoulder</span><br>
+                    <span class="class_restriction">[Abomination or Shieldbreaker only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10 PROT<br>
+                    +10% <span class="blight">Blight</span> Resist<br>
+                    +10% <span class="bleed">Bleed</span> Resist<br>
+                    -10 ACC <span class="attack_type">Ranged</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_sharpening_stone.png">
+                <span class="tooltiptext">
+                    <span class="name">Sharpening Stone</span><br>
+                    <span class="class_restriction">[Highwayman or Leper only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +5 ACC <span class="attack_type">Melee</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Melee</span> Skills<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_travellers_boots.png">
+                <span class="tooltiptext">
+                    <span class="name">Traveller's Boots</span><br>
+                    <span class="class_restriction">[Antiquarian or Jester only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +10 DODGE<br>
+                    +10 DODGE on First Round<br>
+                    -15% DMG
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_veteran_gauntlet.png">
+                <span class="tooltiptext">
+                    <span class="name">Veteran Gauntlet</span><br>
+                    <span class="class_restriction">[Crusader or Man-at-Arms only]</span><br>
+                    <span class="rare">Rare</span><br>
+                    +15% DMG while <span class="mark">Marked</span><br>
+                    +10 PROT while <span class="mark">Marked</span><br>
+                    -4 DODGE
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bleeding_skull.png">
+                <span class="tooltiptext">
+                    <span class="name">Bleeding Skull</span><br>
+                    <span class="class_restriction">[Flagellant or Occultist only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG<br>
+                    +20% DMG while <span class="bleed">Bleeding</span><br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +30% <span class="heal">Healing</span> Done<br>
+                    -10% <span class="stress">Virtue</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ivory_pipe.png">
+                <span class="tooltiptext">
+                    <span class="name">Bone Pipe</span><br>
+                    <span class="class_restriction">[Man-at-Arms or Highwayman only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15 PROT while <span class="riposte">Riposte</span> active<br>
+                    +10 DODGE while <span class="riposte">Riposte</span> active<br>
+                    -20% <span class="stress">Stress</span> while <span class="riposte">Riposte</span> active<br>
+                    -2 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ceremonial_goblet.png">
+                <span class="tooltiptext">
+                    <span class="name">Ceremonial Goblet</span><br>
+                    <span class="class_restriction">[Flagellant or Jester only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +25% <span class="heal">Healing</span> Done<br>
+                    +25% <span class="stress">Stress Relief</span> Done<br>
+                    -10% MAX HP<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_cloak_of_anonimity.png">
+                <span class="tooltiptext">
+                    <span class="name">Cloak of Anonimity</span><br>
+                    <span class="class_restriction">[Runaway or Jester only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG if in position 2<br>
+                    +5 CRIT if in position 2<br>
+                    +10% DMG if in position 3<br>
+                    +5 CRIT if in position 3<br>
+                    -10% <span class="stress">Stress</span><br>
+                    -8 DODGE
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_executioner_halberd.png">
+                <span class="tooltiptext">
+                    <span class="name">Executioner Halberd</span><br>
+                    <span class="class_restriction">[Crusader or Hellion only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15% DMG if in position 1<br>
+                    +7 CRIT if in position 1<br>
+                    -7 CRIT if not in position 1<br>
+                    -20% <span class="move">Move</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_faded_effigy.png">
+                <span class="tooltiptext">
+                    <span class="name">Faded Effigy</span><br>
+                    <span class="class_restriction">[Runaway or Vestal only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +3 SPD if Torch above 75<br>
+                    +7 CRIT if Torch above 75<br>
+                    -7 CRIT if Torch below 75<br>
+                    +150% Torch Gain from Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ghoul_claw.png">
+                <span class="tooltiptext">
+                    <span class="name">Ghoul Claw</span><br>
+                    <span class="class_restriction">[Bounty Hunter or Hellion only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +1 SPD<br>
+                    +6 CRIT if in position 1<br>
+                    +10 ACC if in position 2<br>
+                    +15% DMG if in position 3<br>
+                    -20% <span class="stun">Stun</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_idol_of_purity.png">
+                <span class="tooltiptext">
+                    <span class="name">Idol of Purity</span><br>
+                    <span class="class_restriction">[Leper or Vestal only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% <span class="heal">Healing</span> Done<br>
+                    +30% <span class="heal">Healing</span> Received<br>
+                    +30% <span class="stress">Stress Relief</span> Received<br>
+                    +15% <span class="stress">Virtue</span> Chance<br>
+                    -20% <span class="blight">Blight</span> Resist<br>
+                    -20% <span class="bleed">Bleed</span> Resist<br>
+                    -20% <span class="disease">Disease</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_insignia_of_rank.png">
+                <span class="tooltiptext">
+                    <span class="name">Insignia of Rank</span><br>
+                    <span class="class_restriction">[Arbalest or Duelist only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +8 ACC<br>
+                    +3 CRIT<br>
+                    +8 ACC while <span class="mark">Makred</span><br>
+                    +3 CRIT while <span class="mark">Makred</span><br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_monsters_lure.png">
+                <span class="tooltiptext">
+                    <span class="name">Monster's Lure</span><br>
+                    <span class="class_restriction">[Abomination or Houndmaster only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +2 SPD<br>
+                    +15% DMG vs Eldritch<br>
+                    +10 ACC vs Beast<br>
+                    +8 CRIT vs Unholy<br>
+                    +10 DODGE vs Human<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_volatile_concoction.png">
+                <span class="tooltiptext">
+                    <span class="name">Nightshade Concoction</span><br>
+                    <span class="class_restriction">[Plague Doctor or Occultist only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +15% DMG if Torch below 25<br>
+                    +10 ACC if Torch below 25<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_rabbits_foot.png">
+                <span class="tooltiptext">
+                    <span class="name">Rabbit's Foot</span><br>
+                    <span class="class_restriction">[Antiquarian or Grave Robber only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +2 SPD<br>
+                    +20% DMG vs <span class="blight">Blighted</span><br>
+                    +25% <span class="trap">Trap</span> Disarm Chance<br>
+                    -10% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_remembrance_of_mirage.png">
+                <span class="tooltiptext">
+                    <span class="name">Remembrance of Mirage</span><br>
+                    <span class="class_restriction">[Shieldbreaker or Duelist only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG<br>
+                    +8 ACC<br>
+                    +7 CRIT<br>
+                    On Turn End: Self: <span class="move">Shuffle</span> Single
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_satchel_of_dirty_tricks.png">
+                <span class="tooltiptext">
+                    <span class="name">Satchel of Dirty Tricks</span><br>
+                    <span class="class_restriction">[Antiquarian or Grave Robber only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +12 CRIT on First Round<br>
+                    +4 ACC<br>
+                    +10 DODGE<br>
+                    +20% DMG <span class="blight">Blight</span> Chance<br>
+                    -15% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_signal_horn.png">
+                <span class="tooltiptext">
+                    <span class="name">Signal Horn</span><br>
+                    <span class="class_restriction">[Crusader or Houndmaster only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +1 SPD<br>
+                    +15% <span class="trap">Trap</span> Disarm Chance<br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    +50% Food Consumed
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_sturdy_buckle.png">
+                <span class="tooltiptext">
+                    <span class="name">Sturdy Buckle</span><br>
+                    <span class="class_restriction">[Highwayman or Plague Doctor only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% MAX HP<br>
+                    +4 DODGE<br>
+                    +20% <span class="stun">Stun</span> Resist<br>
+                    +20% <span class="move">Move</span> Resist<br>
+                    -20% DMG if in position 3<br>
+                    -20% DMG if in position 4
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_taste_of_grandeur.png">
+                <span class="tooltiptext">
+                    <span class="name">Taste of Grandeur</span><br>
+                    <span class="class_restriction">[Abomination or Man-at-Arms only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10% DMG<br>
+                    +4 ACC<br>
+                    +10% <span class="stress">Virtue</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_vanguards_keepsake.png">
+                <span class="tooltiptext">
+                    <span class="name">Vanguard's Keepsake</span><br>
+                    <span class="class_restriction">[Leper or Shieldbreaker only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +10 PROT<br>
+                    +10 ACC<br>
+                    +15% DMG if in position 1<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_very_rare.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_weighted_bolas.png">
+                <span class="tooltiptext">
+                    <span class="name">Weighted Bolas</span><br>
+                    <span class="class_restriction">[Arbalest or Bounty Hunter only]</span><br>
+                    <span class="very_rare">Very Rare</span><br>
+                    +12 ACC<br>
+                    +30% <span class="debuff">Debuff</span> Chance<br>
+                    +30% <span class="debuff">Move</span> Chance<br>
+                    -3 CRIT
+                </span>   
+            </div>
+        </div>
+
+        <h2>Antique Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_antediluvian_secrets.png">
+                <span class="tooltiptext">
+                    <span class="name">Antediluvian Secrets</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10 ACC if Torch below 50<br>
+                    +5 CRIT if Torch below 50<br>
+                    +10% <span class="stress">Stress</span><br>
+                    On attack Hit: Torch -5<br>
+                    On Monster Kill: <span class="buff">Buff Self:</span> +10% DMG (100% base) 
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_baldwins_mask.png">
+                <span class="tooltiptext">
+                    <span class="name">Baldwin's Mask</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10 PROT<br>
+                    +25% <span class="stress">Virtue</span> Chance<br>
+                    +20% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_barbarians_spike.png">
+                <span class="tooltiptext">
+                    <span class="name">Barbarus</span><br>
+                    <span class="antique">Antique</span><br>
+                    +20% DMG if <span class="afflict">Afflicted</span><br>
+                    +10 ACC if <span class="afflict">Afflicted</span><br>
+                    +20% <span class="stun">Stun</span> Chance if <span class="afflict">Afflicted</span><br>
+                    +20% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ark_of_the_covenant.png">
+                <span class="tooltiptext">
+                    <span class="name">Carpenter's Cup</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15% DMG while <span class="mark">Marked</span><br>
+                    +7 CRIT while <span class="mark">Marked</span><br>
+                    +20% <span class="stress">Stress Relief</span> Done<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_centurions_bracer.png">
+                <span class="tooltiptext">
+                    <span class="name">Centurion's Bracer</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% <span class="scouting">Scouting</span> Chance<br>
+                    +10% <span class="trap">Trap</span> Disarm Chance<br>
+                    -10% Chance Party <span class="scouting">Surprised</span><br>
+                    +10% Chance Monsters <span class="scouting">Surprised</span><br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_chain_of_locks.png">
+                <span class="tooltiptext">
+                    <span class="name">Chain of Locks</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +1 SPD<br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +6 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    <span class="name">Transform</span>: +100% <span class="stress">Stress</span> Inflicted on Party
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_crocodiles_tooth.png">
+                <span class="tooltiptext">
+                    <span class="name">Crocodile's Tooth</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +20% <span class="blight">Blight</span> Chance<br>
+                    +20% DMG vs <span class="blight">Blighted</span><br>
+                    +8 CRIT vs <span class="blight">Blighted</span><br>
+                    On Attack: Self: <span class="blight">Blight:</span>: (100% base) 1pts/rd for 3 rds
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_derusting_solution.png">
+                <span class="tooltiptext">
+                    <span class="name">Derusting Solution</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +7 CRIT<br>
+                    On Monster Kill: <span class="debuff">Debuff Self:</span>: -2 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_devils_eye.png">
+                <span class="tooltiptext">
+                    <span class="name">Devil's Eye</span><br>
+                    <span class="antique">Antique</span><br>
+                    Trigger Limit: 6<br>
+                    On Combat End: <span class="buff">Buff Self:</span>: +5% DMG<br>
+                    On Combat End: <span class="buff">Buff Self:</span>: +2 ACC<br>
+                    On Combat End: <span class="debuff">Debuff Self:</span>: +5% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_emergency_supplies.png">
+                <span class="tooltiptext">
+                    <span class="name">Emergency Supplies</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% <span class="scouting">Scouting</span> Chance<br>
+                    +10% <span class="scouting">Scouting</span> Chance if <span class="name">Skeleton Key</span> is in Inventory<br>
+                    -10% Chance Party <span class="scouting">Surprised</span><br>
+                    -10% Chance Party <span class="scouting">Surprised</span> if <span class="name">Skeleton Key</span> is in Inventory<br>
+                    +10% <span class="stress">Stress</span> if <span class="name">Skeleton Key</span> is not in Inventory
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_exotic_snuff.png">
+                <span class="tooltiptext">
+                    <span class="name">Exotic Snuff</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% DMG if HP above 99%<br>
+                    +15 ACC if HP above 99%<br>
+                    +7 CRIT if HP above 99%<br>
+                    +15% <span class="stress">Stress</span> if HP below 100%
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_grand_grimoire.png">
+                <span class="tooltiptext">
+                    <span class="name">Grand Grimoire</span><br>
+                    <span class="antique">Antique</span><br>
+                    -3 SPD<br>
+                    On Turn End: Self: <span class="heal">Heal</span> 8 HP (5% chance)<br>
+                    On Turn End: Self: <span class="stress">Stress</span> -15 (5% chance)<br>
+                    On Turn End: Self: <span class="stealth">Stealth</span> (3 rds) (5% chance)<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +20% DMG (5% chance)<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +10 ACC (5% chance)<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +7 CRIT (5% chance)<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +10 DODGE (5% chance)<br>
+                    On Turn End: <span class="buff">Buff Self:</span> +10 PROT (5% chance)
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_halo_of_light.png">
+                <span class="tooltiptext">
+                    <span class="name">Halo of Light</span><br>
+                    <span class="class_restriction">[Vestal only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% DMG<br>
+                    +20% DMG vs <span class="stun">Stunned</span><br>
+                    +15% <span class="stun">Stun</span> Chance<br>
+                    -15% <span class="heal">Healing</span> Done
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_heavy_breastplate.png">
+                <span class="tooltiptext">
+                    <span class="name">Heavy Breastplate</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15 PROT<br>
+                    +30% <span class="heal">Healing</span> Received<br>
+                    -5 CRIT<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_last_flame.png">
+                <span class="tooltiptext">
+                    <span class="name">Last Flame</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15% <span class="trap">Trap</span> Disarm Chance<br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    +15% Chance Monsters <span class="scouting">Surprised</span><br>
+                    -6 DODGE if Torch below 75<br>
+                    -8 ACC if Torch below 50<br>
+                    -10% DMG if Torch below 25
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_monkey_paw.png">
+                <span class="tooltiptext">
+                    <span class="name">Monkey's Paw</span><br>
+                    <span class="antique">Antique</span><br>
+                    +8 ACC<br>
+                    +15 DODGE<br>
+                    Crits Received Chance: +3%<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_mothers_earrings.png">
+                <span class="tooltiptext">
+                    <span class="name">Mother's Earrings</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +20% <span class="bleed">Bleed</span> Chance<br>
+                    +10 DODGE while <span class="debuff">Debuffed</span><br>
+                    +10 CRIT while <span class="debuff">Debuffed</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_nomads_helmet.png">
+                <span class="tooltiptext">
+                    <span class="name">Nomad's Helmet</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +4 SPD<br>
+                    +20% <span class="bleed">Bleed</span> Resist<br>
+                    +20% <span class="blight">Blight</span> Resist<br>
+                    -20% <span class="move">Move</span> Chance<br>
+                    -20% <span class="stun">Stun</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_obsidian_disk.png">
+                <span class="tooltiptext">
+                    <span class="name">Obsidian Compass</span><br>
+                    <span class="antique">Antique</span><br>
+                    Trigger Limit: 1<br>
+                    +25% <span class="scouting">Scouting</span> Chance<br>
+                    On Monster Kill: Summon Abhorrent Shambler (100% Chance)
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ornate_weight.png">
+                <span class="tooltiptext">
+                    <span class="name">Ornate Weight</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +30% <span class="bleed">Bleed</span> Resist<br>
+                    -20% <span class="stress">Stress</span><br>
+                    -15% DMG<br>
+                    -1 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_outlaws_bandana.png">
+                <span class="tooltiptext">
+                    <span class="name">Outlaw's Bandana</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15 SPD on First Round<br>
+                    +20% <span class="debuff">Debuff</span> Chance<br>
+                    +33% <span class="heal">Healing</span> Done<br>
+                    -90% DMG on First Round
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_panacea.png">
+                <span class="tooltiptext">
+                    <span class="name">Panacea</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15% <span class="heal">Healing</span> Done<br>
+                    +40% <span class="heal">Healing</span> Done while Camping<br>
+                    -20% DMG<br>
+                    -2 SPD<br>
+                    Friendly Skill: <span class="buff">Buff Target:</span> +5 DODGE<br>
+                    Friendly Skill: <span class="buff">Buff Target:</span> +2 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_pilgrims_confort.png">
+                <span class="tooltiptext">
+                    <span class="name">Pilgrim's Confort</span><br>
+                    <span class="antique">Antique</span><br>
+                    +20% <span class="heal">Healing</span> Done while Camping<br>
+                    +20% <span class="stress">Stress Relief</span> Done while Camping<br>
+                    Prevents nighttime ambush<br>
+                    -10% MAX HP
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_pirates_dice.png">
+                <span class="tooltiptext">
+                    <span class="name">Pirate's Dice</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +5 CRIT if <span class="name">Citrine</span> is in Inventory<br>
+                    +5 CRIT if <span class="name">Jade</span> is in Inventory<br>
+                    +5 CRIT if <span class="name">Onyx</span> is in Inventory<br>
+                    +5 CRIT if <span class="name">Emerald</span> is in Inventory<br>
+                    +5 CRIT if <span class="name">Sapphire</span> is in Inventory<br>
+                    +5 CRIT if <span class="name">Ruby</span> is in Inventory
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_jade_ring.png">
+                <span class="tooltiptext">
+                    <span class="name">Ring of the Last Dreamer</span><br>
+                    <span class="antique">Antique</span><br>
+                    Ignores <span class="stealth">Stealth</span><br>
+                    +20% Chance Party <span class="scouting">Surprised</span><br>
+                    -10% <span class="scouting">Scouting</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_shell.png">
+                <span class="tooltiptext">
+                    <span class="name">Seaweed Anchor</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15 PROT<br>
+                    +50% <span class="move">Move</span> Resist<br>
+                    On Attack Hit: <span class="move">Shuffle</span> 2 rds (100% base)<br>
+                    On Being Hit: Self: <span class="stress">Stress</span> +2/rd for 3 rds (50% base)
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_silken_neckerchief.png">
+                <span class="tooltiptext">
+                    <span class="name">Silken Neckerchief</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% DMG on First Round<br>
+                    +10 ACC on First Round<br>
+                    +7 CRIT on First Round<br>
+                    +10% Chance Party <span class="scouting">Surprised</span><br>
+                    -10% Chance Monsters <span class="scouting">Surprised</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_spanish_dubloon.png">
+                <span class="tooltiptext">
+                    <span class="name">Spanish Dubloon</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +4 SPD<br>
+                    +10 DODGE<br>
+                    +20% <span class="blight">Blight</span> Chance<br>
+                    +20% <span class="Debuff">Debuff</span> Chance<br>
+                    -10% <span class="deathblow">Death Blow</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_old_standard.png">
+                <span class="tooltiptext">
+                    <span class="name">Standard of Yesterday</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +2 SPD<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +20% <span class="move">Move</span> Chance<br>
+                    +20% <span class="debuff">Debuff</span> Chance<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_subject_40.png">
+                <span class="tooltiptext">
+                    <span class="name">Subject #40</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +3 SPD<br>
+                    +50% <span class="heal">Healing</span> Done<br>
+                    +30% <span class="heal">Healing</span> Done while Camping<br>
+                    -30% <span class="blight">Blight</span> Resist<br>
+                    +10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_tome_of_maladies.png">
+                <span class="tooltiptext">
+                    <span class="name">Tome of Maladies and Curses</span><br>
+                    <span class="antique">Antique</span><br>
+                    +20% <span class="blight">Blight</span> Chance<br>
+                    +20% <span class="bleed">Bleed</span> Chance<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +20% <span class="debuff">Debuff</span> Chance<br>
+                    +20% <span class="move">Move</span> Chance<br>
+                    +15% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_treasure_map.png">
+                <span class="tooltiptext">
+                    <span class="name">Treasure Map</span><br>
+                    <span class="class_restriction">[Grave Robber only]</span><br>
+                    <span class="antique">Antique</span><br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    +15% <span class="trap">Trap</span> Disarm Chance<br>
+                    +10 CRIT if <span class="afflict">Afflicted</span><br>
+                    -25% <span class="stress">Virtue</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_antique.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_wraiths_cape.png">
+                <span class="tooltiptext">
+                    <span class="name">Wraith's Cape</span><br>
+                    <span class="antique">Antique</span><br>
+                    +10% DMG if <span class="stress">Stress</span> above 25<br>
+                    +10 DODGE if <span class="stress">Stress</span> above 50<br>
+                    +7 CRIT if <span class="stress">Stress</span> above 75<br>
+                    +10% <span class="stress">Virtue</span> Chance<br>
+                    +25% <span class="stress">Stress</span>
+                </span>   
+            </div>
+        </div>
+
+        <h2>Foreign Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_acrid_vial.png">
+                <span class="tooltiptext">
+                    <span class="name">Acrid Vial</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +35% <span class="blight">Blight</span> Chance if in position 3<br>
+                    +35% <span class="debuff">Debuff</span> Chance if in position 3<br>
+                    +35% <span class="move">Move</span> Chance if in position 3<br>
+                    +35% <span class="blight">Blight</span> Chance if in position 4<br>
+                    +35% <span class="debuff">Debuff</span> Chance if in position 4<br>
+                    +35% <span class="move">Move</span> Chance if in position 4<br>
+                    -10% <span class="stress">Stress</span><br>
+                    <span class="set">"I'm sure I have a tonic that fixes that!"</span><br>
+                    +12 ACC
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_attack_whistle.png">
+                <span class="tooltiptext">
+                    <span class="name">Attack Whistle</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +15% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +15% DMG vs <span class="mark">Marked</span><br>
+                    +7 CRIT vs <span class="mark">Marked</span><br>
+                    -8 DODGE<br>
+                    <span class="set">"Outlaws, all of them... Justice is coming!"</span><br>
+                    +20% DMG vs <span class="stun">Stunned</span><br>
+                    +30% <span class="stun">Stun</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_battle_scarred_helm.png">
+                <span class="tooltiptext">
+                    <span class="name">Battle-Scarred Helm</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +1 SPD<br>
+                    +10 PROT<br>
+                    +8% <span class="deathblow">Deathblow</span> Resist<br>
+                    -50% <span class="heal">Healing</span> Done<br>
+                    <span class="set">"Even in darkness I shall fear no evil."</span><br>
+                    +15% MAX HP<br>
+                    +8 ACC
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_benefactors_haversack.png">
+                <span class="tooltiptext">
+                    <span class="name">Benefactor's Haversack</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +33% <span class="heal">Healing</span> Done<br>
+                    +100% <span class="stress">Stress Relief</span> Done<br>
+                    -15% DMG<br>
+                    <span class="set">"I have seen worse in my days."</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_black_crow_feather.png">
+                <span class="tooltiptext">
+                    <span class="name">Black Crow Feather</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +30% <span class="move">Move</span> Chance<br>
+                    +30% <span class="debuff">Debuff</span> Chance<br>
+                    +30% <span class="move">Move</span> Resist<br>
+                    +30% <span class="debuff">Debuff</span> Resist<br>
+                    -1 SPD<br>
+                    <span class="set">"Good fortune is a rare and wondrous thing."</span><br>
+                    +5 ACC<br>
+                    +5 DODGE<br>
+                    +5 CRIT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_blood_red_coin.png">
+                <span class="tooltiptext">
+                    <span class="name">Blood-Red Coin</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +25% DMG vs <span class="bleed">Bleeding</span><br>
+                    +10 ACC vs <span class="bleed">Bleeding</span><br>
+                    +20% <span class="bleed">Bleed</span> Chance<br>
+                    -4 DODGE<br>
+                    <span class="set">"Joke's on you."</span><br>
+                    +30% <span class="heal">Healing</span> Received
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bone_vest.png">
+                <span class="tooltiptext">
+                    <span class="name">Bone Vest</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 PROT<br>
+                    +8% <span class="deathblow">Deathblow</span> Resist<br>
+                    -15% <span class="stress">Stress</span><br>
+                    <span class="set">"Spirits call on me!"</span><br>
+                    +20% DMG if in position 1<br>
+                    +7 CRIT if in position 1
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bottle_of_perfume.png">
+                <span class="tooltiptext">
+                    <span class="name">Bottle of Perfume</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    <span class="riposte">Riposte</span>: -10% DMG<br>
+                    On <span class="riposte">Riposte</span> Hit: Self: <span class="stress">Stress</span> -5<br>
+                    On <span class="riposte">Riposte</span> Hit: <span class="buff">Buff Self:</span> +2 SPD<br>
+                    <span class="set">"Thank you for this final lesson..."</span><br>
+                    +10 ACC while <span class="riposte">Riposte</span> active<br>
+                    +10 DODGE while <span class="riposte">Riposte</span> active
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bottled_luck.png">
+                <span class="tooltiptext">
+                    <span class="name">Bottled Luck</span><br>
+                    <span class="class_restriction">[Grave Robber only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +2 SPD<br>
+                    -15% <span class="stress">Stress</span> on Hallways<br>
+                    -15% <span class="stress">Stress</span> if Torch below 25<br>
+                    <span class="set">"Darkness suits me like a glove."</span><br>
+                    +10 ACC if Torch below 25<br>
+                    +7 CRIT if Torch below 25
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bounty_notice.png">
+                <span class="tooltiptext">
+                    <span class="name">Bounty Notice</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +4 SPD on First Round<br>
+                    +15 ACC on First Round<br>
+                    +8 DODGE on First Round<br>
+                    <span class="set">"Solid walls and sturdy armor. Humpf, easy work..."</span><br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +30% <span class="stun">Stun</span> Chance<br>
+                    +30% <span class="move">Move</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_branch_of_sage.png">
+                <span class="tooltiptext">
+                    <span class="name">Branch of Sage</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    -10% <span class="stress">Stress</span><br>
+                    +25% <span class="stress">Virtue</span> Chance while Any Character is <span class="burn">Burning</span><br>
+                    <span class="set">"Good fortune is a rare and wondrous thing."</span><br>
+                    +5 ACC<br>
+                    +5 DODGE<br>
+                    +5 CRIT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_burial_urn.png">
+                <span class="tooltiptext">
+                    <span class="name">Burial Urn</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +12% <span class="stress">Virtue</span> Chance<br>
+                    +12% <span class="deathblow">Death Blow</span> Resist<br>
+                    -4 DODGE<br>
+                    <span class="set">"That night will stay with me forever..."</span><br>
+                    +7 CRIT<br>
+                    +7 CRIT while <span class="stealth">Stealthed</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_caltrops_cartridge.png">
+                <span class="tooltiptext">
+                    <span class="name">Caltrops Cartridge</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +50% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    -15% DMG <span class="attack_type">Melee</span> Skills<br>
+                    <span class="set">"Solid walls and sturdy armor. Humpf, easy work..."</span><br>
+                    +30% <span class="bleed">Bleed</span> Chance<br>
+                    +30% <span class="stun">Stun</span> Chance<br>
+                    +30% <span class="move">Move</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_cautherizing_salts.png">
+                <span class="tooltiptext">
+                    <span class="name">Cautherizing Salts</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10% MAX HP<br>
+                    +30% <span class="blight">Blight</span> Resist<br>
+                    +30% <span class="bleed">Bleed</span> Resist<br>
+                    -1 SPD<br>
+                    <span class="set">"I shall welcome fate with open arms."</span><br>
+                    +33% <span class="stress">Stress Relief</span> Received<br>
+                    -10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_clasp_of_the_beast.png">
+                <span class="tooltiptext">
+                    <span class="name">Clasp of the Beast</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +30% DMG if <span class="stress">Stress</span> above 50<br>
+                    +7 CRIT if <span class="stress">Stress</span> above 50<br>
+                    -10% <span class="stress">Virtue</span> Chance<br>
+                    <span class="set">"It burns through my veins..."</span><br>
+                    <span class="name">Transform</span>: -100% <span class="stress">Stress</span> Inflicted on Party
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_dark_covenant.png">
+                <span class="tooltiptext">
+                    <span class="name">Dark Covenant</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +15% DMG if in position 1<br>
+                    +4 CRIT if in position 1<br>
+                    +15% DMG if in position 2<br>
+                    +4 CRIT if in position 2<br>
+                    -20% <span class="move">Move</span> Chance<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"PH'NGLUI MGLW'NAFH CTHULHU R'LYEH WGAH'NAGL FHTAGN!"</span><br>      
+                    +25% <span class="heal">Healing</span> Done
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_dying_daffodil.png">
+                <span class="tooltiptext">
+                    <span class="name">Dying Daffodil</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 ACC if in position 1<br>
+                    +7 CRIT if in position 1<br>
+                    -30% <span class="heal">Healing</span> Done<br>
+                    <span class="set">"We must all bear our cross."</span><br>      
+                    +15 PROT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_gauntlet_of_absolution.png">
+                <span class="tooltiptext">
+                    <span class="name">Gauntlet of Absolution</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 PROT<br>
+                    +33% <span class="heal">Healing</span> Done<br>
+                    -1 SPD<br>
+                    <span class="set">"I shall welcome fate with open arms."</span><br>
+                    +33% <span class="stress">Stress Relief</span> Received<br>
+                    -10% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_grim_bandana.png">
+                <span class="tooltiptext">
+                    <span class="name">Grim Bandana</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +1 SPD<br>
+                    +10% DMG if in position 3<br>
+                    +10% DMG if in position 4<br>
+                    +10 DODGE if in position 3<br>
+                    +10 DODGE if in position 4<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"My pistol never misses."</span><br>
+                    +20% DMG <span class="attack_type">Ranged</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_powder_flask.png">
+                <span class="tooltiptext">
+                    <span class="name">Gunpowder Flask</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    +30% <span class="debuff">Debuff</span> Skills<br>
+                    -5% MAX HP<br>
+                    -4 DODGE<br>
+                    <span class="set">"My pistol never misses."</span><br>
+                    +20% DMG <span class="attack_type">Ranged</span> Skills
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_impossible_glyph.png">
+                <span class="tooltiptext">
+                    <span class="name">Impossible Glyph</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +33% <span class="heal">Healing</span> Done<br>
+                    +33% <span class="heal">Healing</span> Received<br>
+                    +33% <span class="stress">Stress Relief</span> Received<br>
+                    <span class="set">"Not today. We shall live to see tomorrow."</span><br>
+                    +15% <span class="stress">Virtue</span> Chance<br>
+                    +15% <span class="deathblow">Death Blow</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ivory_reliquary.png">
+                <span class="tooltiptext">
+                    <span class="name">Ivory Reliquary</span><br>
+                    <span class="class_restriction">[Vestar only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 PROT<br>
+                    +10% <span class="stun">Stun</span> Chance<br>
+                    +150% Torch Gain from Skills<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"The sacred Flame shines above us all."</span><br>
+                    +3 SPD if Torch above 75<br>
+                    +10 DODGE if Torch above 75<br>
+                    -15% <span class="stress">Stress</span> if Torch above 75
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_key_to_the_crypt.png">
+                <span class="tooltiptext">
+                    <span class="name">Key to the Crypt</span><br>
+                    <span class="class_restriction">[Vestar only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +15% DMG<br>
+                    +10 DODGE if Torch below 25<br>
+                    -20% <span class="heal">Healing</span> Received<br>
+                    <span class="set">"Darkness suits me like a glove."</span><br>
+                    +10 ACC if Torch below 25<br>
+                    +7 CRIT if Torch below 25
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_love_letters.png">
+                <span class="tooltiptext">
+                    <span class="name">Love Letters</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10% <span class="stress">Stress</span><br>
+                    On Monster Kill: Self: Activates <span class="riposte">Riposte</span><br>
+                    <span class="set">"Thank you for this final lesson..."</span><br>
+                    +10 ACC while <span class="riposte">Riposte</span> active<br>
+                    +10 DODGE while <span class="riposte">Riposte</span> active
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_materia_pestis.png">
+                <span class="tooltiptext">
+                    <span class="name">Materia Pestis</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +30% <span class="bleed">Bleed</span> Resist<br>
+                    +30% <span class="blight">Blight</span> Resist<br>
+                    +30% <span class="disease">Disease</span> Resist<br>
+                    +30% <span class="debuff">Debuff</span> Resist<br>
+                    <span class="set">"Not today. We shall live to see tomorrow."</span><br>
+                    +15% <span class="stress">Virtue</span> Chance<br>
+                    +15% <span class="deathblow">Death Blow</span> Resist
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_mjolnirs_eye.png">
+                <span class="tooltiptext">
+                    <span class="name">Mjolnir's Eye</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +2 SPD<br>
+                    +20% <span class="debuff">Debuff</span> Chance<br>
+                    +20% <span class="move">Move</span> Chance<br>
+                    -10% MAX HP<br>
+                    <span class="set">"Chin up. We depend on each other."</span><br>
+                    -20% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_odins_protector.png">
+                <span class="tooltiptext">
+                    <span class="name">Odin's Protector</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +20 PROT<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +20% <span class="move">Move</span> Resist<br>
+                    -10% DMG<br>
+                    <span class="set">"Chin up. We depend on each other."</span><br>
+                    -20% <span class="stress">Stress</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_primrose_blossom.png">
+                <span class="tooltiptext">
+                    <span class="name">Primrose Blossom</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +50% <span class="heal">Healing</span> Done<br>
+                    +50% <span class="heal">Healing</span> Done on First Round<br>
+                    -1 SPD<br>
+                    -1 SPD on First Round<br>
+                    <span class="set">"I'm sure I have a tonic that fixes that!"</span><br>
+                    +12 ACC
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_reaper_shroud.png">
+                <span class="tooltiptext">
+                    <span class="name">Reaper Shroud</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +15% DMG if HP below 40%<br>
+                    +15 ACC if HP below 40%<br>
+                    +4 CRIT if HP below 40%<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"Joke's on you."</span><br>
+                    +30% <span class="heal">Healing</span> Received
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_lost_ring_of_the_serpent.png">
+                <span class="tooltiptext">
+                    <span class="name">Ring of the Serpent</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +1 SPD<br>
+                    +20% <span class="bleed">Bleed</span> Resist<br>
+                    +20% <span class="blight">Blight</span> Resist<br>
+                    +20% <span class="stun">Stun</span> Resist<br>
+                    <span class="set">"That night will stay with me forever..."</span><br>
+                    +7 CRIT<br>
+                    +7 CRIT while <span class="stealth">Stealthed</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_robins_bandana.png">
+                <span class="tooltiptext">
+                    <span class="name">Robin's Bandana</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +3 SPD<br>
+                    +10% <span class="stress">Virtue</span> Chance<br>
+                    <span class="set">"I have seen worse in my days."</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_sacred_memento.png">
+                <span class="tooltiptext">
+                    <span class="name">Sacred Memento</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10% MAX HP<br>
+                    +15% DMG while <span class="mark">Marked</span><br>
+                    -20% <span class="stress">Stress</span> while <span class="mark">Marked</span><br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"We must all bear our cross."</span><br>      
+                    +15 PROT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_sacrificial_kris.png">
+                <span class="tooltiptext">
+                    <span class="name">Sacrificial Kris</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +20% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +10 ACC <span class="attack_type">Melee</span> Skills<br>
+                    <span class="set">"PH'NGLUI MGLW'NAFH CTHULHU R'LYEH WGAH'NAGL FHTAGN!"</span><br>      
+                    +25% <span class="heal">Healing</span> Done
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_salamander_censer.png">
+                <span class="tooltiptext">
+                    <span class="name">Salamander Censer</span><br>
+                    <span class="class_restriction">[Vestar only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +15% MAX HP<br>
+                    +15% DMG<br>
+                    -20% <span class="heal">Healing</span> Done
+                    <span class="set">"The sacred Flame shines above us all."</span><br>
+                    +3 SPD if Torch above 75<br>
+                    +10 DODGE if Torch above 75<br>
+                    -15% <span class="stress">Stress</span> if Torch above 75
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_savage_gauntlets.png">
+                <span class="tooltiptext">
+                    <span class="name">Savage Gauntlets</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +8 ACC<br>
+                    +5 CRIT<br>
+                    -25% <span class="stun">Stun</span> Chance<br>
+                    <span class="set">"Spirits call on me!"</span><br>
+                    +20% DMG if in position 1<br>
+                    +7 CRIT if in position 1
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_training_manual.png">
+                <span class="tooltiptext">
+                    <span class="name">Training Manual</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +3 SPD<br>
+                    +10 ACC<br>
+                    -30% <span class="heal">Healing</span> Done<br>
+                    -30% <span class="stress">Stress Relief</span> Done<br>
+                    <span class="set">"Outlaws, all of them... Justice is coming!"</span><br>
+                    +20% DMG vs <span class="stun">Stunned</span><br>
+                    +30% <span class="stun">Stun</span> Chance
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_wretch_cloak.png">
+                <span class="tooltiptext">
+                    <span class="name">Wretch's Cloak</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +10 ACC<br>
+                    +10 DODGE<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"It burns through my veins..."</span><br>
+                    <span class="name">Transform</span>: -100% <span class="stress">Stress</span> Inflicted on Party
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_foreign.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_writ_of_execution.png">
+                <span class="tooltiptext">
+                    <span class="name">Writ of Execution</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="foreign">Foreign</span><br>
+                    +1 SPD<br>
+                    +15% DMG<br>
+                    -50% <span class="stress">Stress Relief</span> Done<br>
+                    <span class="set">"Even in darkness I shall fear no evil."</span><br>
+                    +15% MAX HP<br>
+                    +8 ACC
+                </span>   
+            </div>
+        </div>
+
+        <h2>Relic Trinkets</h2>
+
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_amputation_saw.png">
+                <span class="tooltiptext">
+                    <span class="name">Amputation Saw</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +25% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +40% <span class="bleed">Bleed</span> Chance<br>
+                    -1 SPD<br>
+                    <span class="set">"I wonder what I can find inside their cadavers..."</span><br>
+                    +25% DMG vs <span class="bleed">Bleeding</span><br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_black_diamond_mirror.png">
+                <span class="tooltiptext">
+                    <span class="name">Black Diamond Mirror</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15 PROT<br>
+                    +20% MAX HP<br>
+                    -8 DODGE<br>
+                    <span class="set">"The time to hide has come to an end."</span><br>
+                    +10 CRIT<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_calling_salts.png">
+                <span class="tooltiptext">
+                    <span class="name">Calling Salts</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10% MAX HP<br>
+                    +30% <span class="debuff">Debuff</span> Chance<br>
+                    +30% <span class="move">Move</span> Chance<br>
+                    +20% <span class="debuff">Debuff</span> Resist<br>
+                    +20% <span class="move">Move</span> Resist<br>
+                    <span class="set">"I have peered into the emptiness of the abyss..."</span><br>
+                    +15% DMG if in position 3<br>
+                    +15% DMG if in position 4
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_chiefs_pendant.png">
+                <span class="tooltiptext">
+                    <span class="name">Chief's Pendant</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    -20% Chance Party <span class="scouting">Surprised</span><br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    -5% DMG<br>
+                    <span class="set">"We're in my turf now."</span><br>
+                    +12 CRIT vs <span class="bleed">Bleeding</span><br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_cloak_and_dagger.png">
+                <span class="tooltiptext">
+                    <span class="name">Cloak and Dagger</span><br>
+                    <span class="class_restriction">[Grave Robber only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +1 SPD<br>
+                    +15% DMG if HP above 49%<br>
+                    +10 ACC if HP below 50%<br>
+                    <span class="set">"Out of sight, out of mind."</span><br>
+                    +15% DMG while <span class="stealth">Stealthed</span><br>
+                    +7 CRIT while <span class="stealth">Stealthed</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_confessor_gauntlet.png">
+                <span class="tooltiptext">
+                    <span class="name">Confessor Gauntlet</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 ACC<br>
+                    +10 ACC if Torch below 25<br>
+                    -30% <span class="bleed">Bleed</span> Resist<br>
+                    <span class="set">"The pain... It clears my vision."</span><br>
+                    +10% DMG if HP below 40%<br>
+                    +5 ACC if HP below 40%<br>
+                    +4 CRIT if HP below 40%
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_crown_of_thorns.png">
+                <span class="tooltiptext">
+                    <span class="name">Crown of Thorns</span><br>
+                    <span class="class_restriction">[Flagellant only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% DMG vs <span class="bleed">Bleeding</span><br>     
+                    +5 CRIT vs <span class="bleed">Bleeding</span><br>  
+                    -4 DODGE<br>
+                    <span class="set">"The pain... It clears my vision."</span><br>
+                    +10% DMG if HP below 40%<br>
+                    +5 ACC if HP below 40%<br>
+                    +4 CRIT if HP below 40%
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_devils_misfortune.png">
+                <span class="tooltiptext">
+                    <span class="name">Devil's Misfortune</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 CRIT<br>     
+                    On Attack Hit: Self: 666 DMG (1% Chance)<br>
+                    <span class="set">"A ballad for the wretched..."</span><br>
+                    +33% <span class="stress">Stress Relief</span> Received while Camping<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_dirge_for_the_old_ones.png">
+                <span class="tooltiptext">
+                    <span class="name">Dirge for the Old Ones</span><br>
+                    <span class="class_restriction">[Occultist only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +4 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    +15% DMG vs <span class="mark">Marked</span><br>             
+                    +10 ACC vs <span class="mark">Marked</span><br>             
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"I have peered into the emptiness of the abyss..."</span><br>
+                    +15% DMG if in position 3<br>
+                    +15% DMG if in position 4
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_fang_talisman.png">
+                <span class="tooltiptext">
+                    <span class="name">Fang Talisman</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +20% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +5 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    -10% <span class="stress">Stress</span><br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"There's a snake inside each one of us."</span><br>
+                    +20% DMG vs <span class="blight">Blighted</span><br>
+                    +4 CRIT vs <span class="blight">Blighted</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_final_remarks.png">
+                <span class="tooltiptext">
+                    <span class="name">Final Remarks</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15 CRIT vs <span class="stun">Stunned</span><br>
+                    +15 CRIT vs <span class="mark">Marked</span><br>
+                    <span class="set">"From dusk 'till dawn."</span><br>
+                    +10 ACC if in mode Aggressive<br>
+                    +4 SPD if in mode Defensive
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_glorious_standard.png">
+                <span class="tooltiptext">
+                    <span class="name">Glorious Standard</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    +30% <span class="move">Move</span> Resist<br>
+                    +30% <span class="heal">Healing</span> Received<br>
+                    -8 DODGE<br>
+                    <span class="set">"They shall be crushed by light."</span><br>
+                    +10% DMG if Torch above 75<br>
+                    +5 ACC if Torch above 75<br>
+                    +4 CRIT if Torch above 75
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_hazard_mask.png">
+                <span class="tooltiptext">
+                    <span class="name">Hazard Mask</span><br>
+                    <span class="class_restriction">[Plague Doctor only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% MAX HP<br>
+                    +15% <span class="heal">Healing</span> Received<br>
+                    +20% <span class="blight">Blight</span> Resist<br>
+                    -8 ACC<br>
+                    <span class="set">"I wonder what I can find inside their cadavers..."</span><br>
+                    +25% DMG vs <span class="bleed">Bleeding</span><br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_heart_seeker.png">
+                <span class="tooltiptext">
+                    <span class="name">Heart Seeker</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +20% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +10% DMG vs HP below 40%<br>
+                    -1 SPD<br>
+                    <span class="set">"One day, I might find a foe that does not fall."</span><br>
+                    +25% DMG vs size 2+<br>
+                    +15 ACC vs size 2+
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_infamous_visage.png">
+                <span class="tooltiptext">
+                    <span class="name">Infamous Visage</span><br>
+                    <span class="class_restriction">[Bounty Hunter only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15 PROT<br>
+                    +8 DODGE<br>
+                    +20% <span class="heal">Healing</span> Received<br>
+                    +15% <span class="stress">Stress</span><br>
+                    <span class="set">"One day, I might find a foe that does not fall."</span><br>
+                    +25% DMG vs size 2+<br>
+                    +15 ACC vs size 2+
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_durable_armlet.png">
+                <span class="tooltiptext">
+                    <span class="name">Ironclad Armlet</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10% MAX HP<br>
+                    +12 ACC<br>
+                    -1 SPD<br>
+                    <span class="set">"I shall not go quietly into the night."</span><br>
+                    +15% DMG
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_lucky_tassel.png">
+                <span class="tooltiptext">
+                    <span class="name">Lucky Tassel</span><br>
+                    <span class="class_restriction">[Grave Robber only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 CRIT<br>
+                    -10% MAX HP<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"Out of sight, out of mind."</span><br>
+                    +15% DMG while <span class="stealth">Stealthed</span><br>
+                    +7 CRIT while <span class="stealth">Stealthed</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_parrying_dagger.png">
+                <span class="tooltiptext">
+                    <span class="name">Parrying Dagger</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    <span class="riposte">Riposte</span>: +15% DMG<br>
+                    <span class="riposte">Riposte</span>: +5 ACC<br>
+                    <span class="riposte">Riposte</span>: +5 CRIT<br>
+                    <span class="set">"Too fast for you, hein?"</span><br>
+                    +4 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_tattered_scarf.png">
+                <span class="tooltiptext">
+                    <span class="name">Patchwork Scarf</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +2 SPD if Pile of Ash is in Inventory<br>
+                    +8 DODGE if Pile of Ash is in Inventory<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    On Monster Kill: Gain a Pile of Ash Trinket<br>
+                    <span class="set">"Run, now! And do not look back!"</span><br>
+                    +15% DMG vs <span class="burn">Burning</span><br>
+                    +7 CRIT vs <span class="burn">Burning</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_piercing_quarrel.png">
+                <span class="tooltiptext">
+                    <span class="name">Piercing Quarrel</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10% DMG <span class="attack_type">Ranged</span> Skills<br>
+                    +4 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    +20 Armor Piercing<br>
+                    -1 SPD<br>
+                    <span class="set">"They do not know what's coming for them."</span><br>
+                    +20 PROT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_purgation_talisman.png">
+                <span class="tooltiptext">
+                    <span class="name">Purgation Talisman</span><br>
+                    <span class="class_restriction">[Vestal only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Melee</span> Skills<br>
+                    +8 ACC<br>
+                    -20% <span class="stun">Stun</span> Chance<br>
+                    -20% <span class="debuff">Debuff</span> Chance<br>
+                    <span class="set">"In purity and in blood..."</span><br>
+                    +20% <span class="heal">Healing</span> Received<br>  
+                    +20% <span class="stress">Stress Relief</span> Received<br>  
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ravens_wing.png">
+                <span class="tooltiptext">
+                    <span class="name">Raven's Wing</span><br>
+                    <span class="class_restriction">[Leper only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +5 CRIT<br>
+                    +5 CRIT if <span class="stress">Stress</span> above 100<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"I shall not go quietly into the night."</span><br>
+                    +15% DMG
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_royal_hairpin.png">
+                <span class="tooltiptext">
+                    <span class="name">Royal Hairpin</span><br>
+                    <span class="class_restriction">[Hellion only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 ACC<br>
+                    +20% <span class="bleed">Bleed</span> Chance<br>
+                    -1 SPD<br>
+                    <span class="set">"We're in my turf now."</span><br>
+                    +12 CRIT vs <span class="bleed">Bleeding</span><br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_rusted_padlock.png">
+                <span class="tooltiptext">
+                    <span class="name">Rusted Padlock</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +20% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +7% DMG <span class="attack_type">Melee</span> Skills<br>
+                    <span class="set">"They did this to me... They shall pay!"</span><br>
+                    +20% DMG if in position 1
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_sacred_blade.png">
+                <span class="tooltiptext">
+                    <span class="name">Sacred Blade</span><br>
+                    <span class="class_restriction">[Crusader only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +20% <span class="stun">Stun</span> Chance<br>
+                    +25% <span class="stress">Virtue</span> Chance<br>
+                    -10% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"They shall be crushed by light."</span><br>
+                    +10% DMG if Torch above 75<br>
+                    +5 ACC if Torch above 75<br>
+                    +4 CRIT if Torch above 75
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_shield_spike.png">
+                <span class="tooltiptext">
+                    <span class="name">Shield Spike</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 PROT<br>
+                    +20% DMG if <span class="stress">Stress</span> above 100<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"Wounds so deep they reach the soul..."</span><br>
+                    +25% <span class="stress">Virtue</span> Chance<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_stabilizing_tiller.png">
+                <span class="tooltiptext">
+                    <span class="name">Stabilizing Tiller</span><br>
+                    <span class="class_restriction">[Arbalest only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    -1 SPD<br>
+                    <span class="set">"They do not know what's coming for them."</span><br>
+                    +20 PROT
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_survivor_eyepatch.png">
+                <span class="tooltiptext">
+                    <span class="name">Survivor Eyepatch</span><br>
+                    <span class="class_restriction">[Man-at-Arms only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +12 DODGE<br>
+                    +20% <span class="heal">Healing</span> Received<br>
+                    +20% <span class="deathblow">Death Blow</span> Resist if <span class="stress">Stress</span> above 100<br>
+                    +10% <span class="stress">Stress</span><br>
+                    <span class="set">"Wounds so deep they reach the soul..."</span><br>
+                    +25% <span class="stress">Virtue</span> Chance<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_tattered_chewtoy.png">
+                <span class="tooltiptext">
+                    <span class="name">Tattered Chewtoy</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 DODGE<br>
+                    +33% <span class="stress">Stress Relief</span> Done while <span class="guard">Guarding</span><br>
+                    +33% <span class="heal">Healing</span> Received while <span class="guard">Guarding</span><br>
+                    -1 SPD<br>
+                    <span class="set">"Sit! Good girl!"</span><br>
+                    +66% <span class="guard">Guard</span> Duration<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_tears_of_the_lost.png">
+                <span class="tooltiptext">
+                    <span class="name">Tears of the Lost</span><br>
+                    <span class="class_restriction">[Antiquarian only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +25% DMG <span class="attack_type">Melee</span> Skills<br>
+                    +12 ACC<br>
+                    +10% <span class="stress">Stress</span><br> 
+                    <span class="set">"The time to hide has come to an end."</span><br>
+                    +10 CRIT<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_thread_and_needle.png">
+                <span class="tooltiptext">
+                    <span class="name">Thread and Needle</span><br>
+                    <span class="class_restriction">[Runaway only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 ACC <span class="attack_type">Ranged</span> Skills<br>
+                    +7 CRIT <span class="attack_type">Ranged</span> Skills<br>
+                    -6% <span class="deathblow">Death Blow</span> Resist<br>
+                    <span class="set">"Run, now! And do not look back!"</span><br>
+                    +15% DMG vs <span class="burn">Burning</span><br>
+                    +7 CRIT vs <span class="burn">Burning</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_tome_of_fury.png">
+                <span class="tooltiptext">
+                    <span class="name">Tome of Fury</span><br>
+                    <span class="class_restriction">[Vestal only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +25% DMG vs <span class="bleed">Bleeding</span><br>
+                    On Attack Hit: <span class="bleed">Bleed</span> (120% base) 1 pts/rd for 2 rds<br>
+                    <span class="set">"In purity and in blood..."</span><br>
+                    +20% <span class="heal">Healing</span> Received<br>  
+                    +20% <span class="stress">Stress Relief</span> Received<br>  
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_training_whistle.png">
+                <span class="tooltiptext">
+                    <span class="name">Training Whistle</span><br>
+                    <span class="class_restriction">[Houndmaster only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +20% DMG while <span class="guard">Guarding</span><br>
+                    +10 ACC while <span class="guard">Guarding</span><br>
+                    +20% <span class="bleed">Bleed</span> Chance<br>
+                    -1 SPD<br>
+                    <span class="set">"Sit! Good girl!"</span><br>
+                    +66% <span class="guard">Guard</span> Duration<br>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_fencers_ring.png">
+                <span class="tooltiptext">
+                    <span class="name">Valedictorian Signet</span><br>
+                    <span class="class_restriction">[Duelist only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% DMG while <span class="mark">Marked</span><br>
+                    On Attack Hit: <span class="mark">Mark</span> Target<br>
+                    On Attack Hit: Self: <span class="mark">Mark</span> Target<br>
+                    <span class="set">"From dusk 'till dawn."</span><br>
+                    +10 ACC if in mode Aggressive<br>
+                    +4 SPD if in mode Defensive
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_vampires_shroud.png">
+                <span class="tooltiptext">
+                    <span class="name">Vampire's Shroud</span><br>
+                    <span class="class_restriction">[Abomination only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +15% <span class="trap">Trap</span> Disarm Chance<br>
+                    +15% <span class="scouting">Scouting</span> Chance<br>
+                    +15% Chance Monsters <span class="scouting">Surprised</span><br>
+                    -1 SPD<br>
+                    <span class="set">"They did this to me... They shall pay!"</span><br>
+                    +20% DMG if in position 1
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_duelist_pistol.png">
+                <span class="tooltiptext">
+                    <span class="name">Varnished Pistol</span><br>
+                    <span class="class_restriction">[Highwayman only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    <span class="name">Point Blank Shot</span>: +20% DMG<br>
+                    <span class="name">Point Blank Shot</span>: +10 ACC<br>
+                    <span class="name">Point Blank Shot</span>: +3 CRIT<br>
+                    -10% DMG <span class="attack_type">Melee</span> Skills<br>
+                    <span class="set">"Too fast for you, hein?"</span><br>
+                    +4 SPD
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_viper_spear_tip.png">
+                <span class="tooltiptext">
+                    <span class="name">FViper Spear Tip</span><br>
+                    <span class="class_restriction">[Shieldbreaker only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +10 ACC<br>
+                    +30% <span class="blight">Blight</span> Chance<br>
+                    -1 SPD<br>
+                    <span class="set">"There's a snake inside each one of us."</span><br>
+                    +20% DMG vs <span class="blight">Blighted</span><br>
+                    +4 CRIT vs <span class="blight">Blighted</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_relic.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_well_tuned_lute.png">
+                <span class="tooltiptext">
+                    <span class="name">Well-Tuned Lute</span><br>
+                    <span class="class_restriction">[Jester only]</span><br>
+                    <span class="relic">Relic</span><br>
+                    +25% <span class="stress">Stress Relief</span> Done<br> 
+                    -20% <span class="stress">Stress</span><br> 
+                    -15% DMG<br>
+                    <span class="set">"A ballad for the wretched..."</span><br>
+                    +33% <span class="stress">Stress Relief</span> Received while Camping<br>
+                </span>   
+            </div>
+        </div>
+
+        <h2>Spoils of Wat Trinkets</h2>
+            
+        <div class="spoiler">
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_carrion_eaters_eye.png">
+                <span class="tooltiptext">
+                    <span class="name">Carrion Eater's Eye</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +20% DMG vs <span class="mark">Marked</span><br> 
+                    On Attack Hit: <span class="mark">Mark</span> Target<br>
+                    On Attack Miss: Self: <span class="mark">Mark</span> Target<br>
+                    On Attack Hit: <span class="buff">Buff Target:</span> +20% DMG vs <span class="mark">Marked</span> (100% base)<br>
+                    <span class="set">"They breed quickly down there in the dark."</span><br>
+                    +12 DODGE in the <span class="name">Warrens</span><br>
+                    +40% <span class="disease">Disease</span> in the <span class="name">Warrens</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Warrens</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_bearers_standard.png">
+                <span class="tooltiptext">
+                    <span class="name">Bearer's Standard</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    -10% DMG<br>
+                    On Attack Hit: <span class="buff">Buff Others:</span> +20% DMG<br>
+                    On Attack Hit: <span class="buff">Buff Others:</span> +10 ACC<br>
+                    On Being Hit: <span class="buff">Buff Others:</span> +10 DODGE<br>
+                    On Being Hit: <span class="buff">Buff Others:</span> +2 SPD<br>
+                    <span class="set">"Pace out the halls of your lineage."</span><br>
+                    +15% DMG in the <span class="name">Ruins</span><br>
+                    -30% <span class="stress">Stress</span> in the <span class="name">Ruins</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Ruins</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ucas_claw.png">
+                <span class="tooltiptext">
+                    <span class="name">Uca's Claw</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +15% <span class="bleed">Bleed</span> Chance<br>
+                    +15% <span class="blight">Blight</span> Chance<br>
+                    +150% <span class="bleed">Bleed</span> Duration<br>
+                    +150% <span class="blight">Blight</span> Duration<br>
+                    -20% <span class="bleed">Bleed</span> Resist<br>
+                    -20% <span class="blight">Blight</span> Resist<br>
+                    <span class="set">"The smell of rotting fish is almost unbearable..."</span><br>
+                    +7 CRIT in the <span class="name">Cove</span><br>
+                    +35% <span class="heal">Healing</span> Received in the <span class="name">Cove</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Cove</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_captains_mace.png">
+                <span class="tooltiptext">
+                    <span class="name">Captain's Mace</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +7 CRIT<br>
+                    +50% <span class="stun">Stun</span> Resist<br>
+                    +10% <span class="stress">Stress</span><br>
+                    -10% <span class="stress">Virtue</span> Chance<br>
+                    On Attack Hit: <span class="stun">Stun</span> (100% base)<br>
+                    <span class="set">"Pace out the halls of your lineage."</span><br>
+                    +15% DMG in the <span class="name">Ruins</span><br>
+                    -30% <span class="stress">Stress</span> in the <span class="name">Ruins</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Ruins</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_ghasts_violin.png">
+                <span class="tooltiptext">
+                    <span class="name">Ghast's Violin</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +25% <span class="stress">Stress</span><br>
+                    On Turn End: All Heroes: <span class="stress">Stress</span> -1<br>
+                    <span class="set">"The smell of rotting fish is almost unbearable..."</span><br>
+                    +7 CRIT in the <span class="name">Cove</span><br>
+                    +35% <span class="heal">Healing</span> Received in the <span class="name">Cove</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Cove</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_skivers_snout.png">
+                <span class="tooltiptext">
+                    <span class="name">Skiver's Snout</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +20% MAX HP<br> 
+                    +20% DMG while <span class="bleed">Bleeding</span><br>
+                    +10 CRIT while <span class="blight">Blighted</span><br>
+                    On Attack Hit: Self: <span class="bleed">Bleed</span> (120% base) 1 pts/rd for 3 rds<br>
+                    On Attack Hit: Self: <span class="blight">Blight</span> (120% base) 1 pts/rd for 3 rds<br>
+                    <span class="set">"They breed quickly down there in the dark."</span><br>
+                    +12 DODGE in the <span class="name">Warrens</span><br>
+                    +40% <span class="disease">Disease</span> in the <span class="name">Warrens</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Warrens</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_giants_teeth.png">
+                <span class="tooltiptext">
+                    <span class="name">Giant's Teeth</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    +50% DMG<br> 
+                    On Attack Hit: Self: <span class="stun">Stun</span> (100% base)<br>
+                    <span class="set">"Corruption has soaked the soil."</span><br>
+                    +15 PROT in the <span class="name">Weald</span><br>
+                    +25% <span class="bleed">Bleed</span> Resist in the <span class="name">Weald</span><br>
+                    +25% <span class="blight">Blight</span> Resist in the <span class="name">Weald</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Weald</span>
+                </span>   
+            </div>
+            <div class="tooltip">
+                <img class="trinket" src="trinket/rarity_spoils.png">
+                <img class="trinket" src="trinket/inv_trinket+tvr_viragos_doll.png">
+                <span class="tooltiptext">
+                    <span class="name">Virago's Doll</span><br>
+                    <span class="spoils">Spoils of War</span><br>
+                    -10% <span class="deathblow">Death Blow</span> Resist<br>
+                    On Attack Hit: <span class="debuff">Debuff Target:</span> -12 DODGE (120% base)<br>
+                    On Attack Hit: <span class="debuff">Debuff Target:</span> -12 ACC (120% base)<br>
+                    <span class="set">"Corruption has soaked the soil."</span><br>
+                    +15 PROT in the <span class="name">Weald</span><br>
+                    +25% <span class="bleed">Bleed</span> Resist in the <span class="name">Weald</span><br>
+                    +25% <span class="blight">Blight</span> Resist in the <span class="name">Weald</span><br>
+                    +20% <span class="scouting">Scouting</span> Chance in the <span class="name">Weald</span>
+                </span>   
+            </div>
+        </div>
+    </body>
+
+</html>
